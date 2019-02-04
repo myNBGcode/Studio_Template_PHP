@@ -12,4 +12,14 @@ Read the following instructions in order start working frictionlessly in NBG Dev
 
 5. If you have any thoughts, issues or proposals for SourceLair, it would be great if you could send us an email at support@sourcelair.com
 
+## About the PHP Template
+
+Nbg's PHP template is a minimal host template that serves a simple .html index page
+
+That page is consisted by three links which you can click and then a php function is called which makes a call to NBG's API
+
+In order to create your personal sandbox in your project you need to change the REPLACE_THIS_VALUE parameter of the .php files to match your personal data
+
+The response of your calls will be visible in a new browser window
+
 Have fun coding in your browser!
