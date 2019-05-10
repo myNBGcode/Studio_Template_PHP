@@ -19,13 +19,7 @@ curl_setopt_array($curl, array(
   CURLOPT_HTTP_VERSION => CURL_HTTP_VERSION_1_1,
   CURLOPT_CUSTOMREQUEST => "DELETE",
   CURLOPT_HTTPHEADER => array(
-    "application_id: REPLACE_THIS_VALUE",
-    "provider: REPLACE_THIS_VALUE",
-    "provider_id: REPLACE_THIS_VALUE",
-    "provider_username: REPLACE_THIS_VALUE",
-    "request_id: REPLACE_THIS_VALUE",
-    "sandbox_id: REPLACE_SANDBOX_ID",
-    "Client-Id: REPLACE_THIS_KEY"
+    "Client-Id: REPLACE_THIS_VALUE"
   ),
 ));
 
