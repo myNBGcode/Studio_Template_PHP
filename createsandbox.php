@@ -22,13 +22,7 @@ curl_setopt_array($curl, array(
   CURLOPT_POSTFIELDS => "{\"sandbox_id\":\"REPLACE_SANDBOX_ID\"}",
   CURLOPT_HTTPHEADER => array(
     "accept: text/json",
-    "application_id: REPLACE_THIS_VALUE",
     "content-type: text/json",
-    "provider: REPLACE_THIS_VALUE",
-    "provider_id: REPLACE_THIS_VALUE",
-    "provider_username: REPLACE_THIS_VALUE",
-    "request_id: REPLACE_THIS_VALUE",
-    "sandbox_id: REPLACE_THIS_VALUE",
     "Client-Id: REPLACE_THIS_KEY"
   ),
 ));
