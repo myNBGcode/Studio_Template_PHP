@@ -12,7 +12,7 @@
 $curl = curl_init();
 
 curl_setopt_array($curl, array(
-  CURLOPT_URL => "https://apis.nbg.gr/public/sandbox/obp.account.sandbox/v1.1/obp/my/accounts",
+  CURLOPT_URL => "https://apis.nbg.gr/sandbox/obpaccount/headers/v1.3/obp/my/accounts",
   CURLOPT_RETURNTRANSFER => true,
   CURLOPT_ENCODING => "",
   CURLOPT_MAXREDIRS => 10,
@@ -27,7 +27,7 @@ curl_setopt_array($curl, array(
     "provider_username: REPLACE_THIS_VALUE",
     "request_id: REPLACE_THIS_VALUE",
     "sandbox_id: REPLACE_SANDBOX_ID",
-    "x-ibm-client-id: REPLACE_THIS_KEY"
+    "Client-Id: REPLACE_THIS_KEY"
   ),
 ));
 
