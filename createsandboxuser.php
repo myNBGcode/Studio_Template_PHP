@@ -6,6 +6,11 @@
 		<link rel="stylesheet" type="text/css" href="main.css" />
 	</head>
     <body style="margin:20px;" onload="load()">
+
+          <?php
+        include ("header.php");
+      ?>
+
         <h1 style="text-align:center;">Create Sandbox User call Page - <span style="color:#006e80;">PHP Sandbox Calls Test Website</span></h1>
         <div id="testcalls" >
         <h3 style="font-size:32px;text-align:center;" >
@@ -23,7 +28,9 @@
         </ol>
         </div>
 
-        <div>
+         <h3 style="font-size: 24px;margin-bottom:10px;">
+            Response Samples:
+        </h3>
 <!--
 Status code pop up content. Feel free to add it in your new requests, in order to show the Status Code of your calls.
 -->
@@ -98,7 +105,7 @@ $httpcode = curl_getinfo($curl, CURLINFO_HTTP_CODE);
                 ?>
             </textarea>
 
-        </div>
+
 
         <div id="popup1" class="overlay">
             <div class="popup">
@@ -126,9 +133,7 @@ Script for formating the json Response Samples
             $('#myTextarea').text(textedJson); </script>
 
         <?php
-
         include ("footer.php");
-
         ?>
 
     </body>

@@ -6,6 +6,11 @@
 		<link rel="stylesheet" type="text/css" href="main.css" />
 	</head>
     <body style="margin:20px;" onload="load()">
+
+          <?php
+        include ("header.php");
+      ?>
+
         <h1 style="text-align:center;">Export Sandbox call Page - <span style="color:#006e80;">PHP Sandbox Calls Test Website</span></h1>
         <div id="testcalls" >
         <h3 style="font-size:32px;text-align:center;" >

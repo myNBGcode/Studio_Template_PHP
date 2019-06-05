@@ -9,10 +9,14 @@
     	</head>
 
     <body>
+       <?php
+        include ("header.php");
+      ?>
+
         <h1 style="text-align:center;margin-top:35px;font-size:35px;">Welcome to <span style="color:#006e80;">our PHP Sandbox Calls</span> Test Website</h1>
-   <!--     <h4 style="font-size: 16px;text-align:center;">
-            Note: Before you run the calls you need to change (at least) the parameters named REPLACE_THIS_VALUE or REPLACE_SANDBOX_ID in the variables.php file.
-        </h4>    -->
+        <h4 style="font-size: 16px;text-align:center;margin-top:-20px;">
+            Choose your preferred API type. Fill up the form. Have fun testing!
+        </h4>
 
 <!------------- FORM HANDLER v.2 FOR SHOWING AND HIDING THE PROPER FORM DEPENDING ON API TYPE ----------------->
 
@@ -232,6 +236,28 @@ include ("footer.php");
   }
 }
         </script>
+
+<!--***************************** BACK TO TOP BUTTON ****************************************-->
+
+<button onclick="topFunction()" id="myBtn" title="Go to top">Top</button>
+
+ <script>       // When the user scrolls down 20px from the top of the document, show the button
+window.onscroll = function() {scrollFunction()};
+
+function scrollFunction() {
+  if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+    document.getElementById("myBtn").style.display = "block";
+  } else {
+    document.getElementById("myBtn").style.display = "none";
+  }
+}
+
+// When the user clicks on the button, scroll to the top of the document
+function topFunction() {
+  document.body.scrollTop = 0; // For Safari
+  document.documentElement.scrollTop = 0; // For Chrome, Firefox, IE and Opera
+}
+ </script>
 
     	</body>
 </html>

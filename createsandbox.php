@@ -8,6 +8,11 @@
 
 	</head>
     <body style="margin:20px;" onload="load()">
+
+          <?php
+        include ("header.php");
+      ?>
+
         <h1 style="text-align:center;">Create Sandbox call Page - <span style="color:#006e80;">PHP Sandbox Calls Test Website</span></h1>
         <div id="testcalls" >
         <h3 style="font-size:32px;text-align:center;" >
@@ -24,6 +29,10 @@
             <li style="display:inline-block;"><a href="/yourNextCall2.php"><button class="button">Your Next Call 2</button></a></li>       ---->
         </ol>
         </div>
+
+         <h3 style="font-size: 24px;margin-bottom:10px;">
+            Response Samples:
+        </h3>
 <!--
 Request sample in PHP. For requests in other programming languages visit developers.nbg.gr
 -->
@@ -36,8 +45,50 @@ Request sample in PHP. For requests in other programming languages visit develop
                 $curl = curl_init();
 
 
-                if($tokencheck==="1"){
-echo 'sandbox_id';
+                  if(($tokencheck==="1") and ($api==="confirmation.funds")){
+
+               curl_setopt_array($curl, array(
+  CURLOPT_URL => "https://apis.nbg.gr/sandbox/confirmation.funds/oauth2/v1.3/sandbox",
+  CURLOPT_RETURNTRANSFER => true,
+  CURLOPT_ENCODING => "",
+  CURLOPT_MAXREDIRS => 10,
+  CURLOPT_TIMEOUT => 30,
+  CURLOPT_HTTP_VERSION => CURL_HTTP_VERSION_1_1,
+  CURLOPT_CUSTOMREQUEST => "POST",
+  CURLOPT_POSTFIELDS => "{\"header\":{\"ID\":\"$client_id\",\"application\":\"$client_id\"},\"payload\":{\"sandboxId\":\"$sandbox_id\"}}",
+  CURLOPT_HTTPHEADER => array(
+    "accept: application/json",
+    "authorization: $token",
+    "client-id: $client_id",
+    "content-type: application/json",
+    "request-id: $client_id"
+  ),
+));
+
+            } else if(($tokencheck==="1") and ($api==="uk.openbanking.accountinfo")){
+
+                curl_setopt_array($curl, array(
+                    CURLOPT_URL => "https://apis.nbg.gr/sandbox/$api/oauth2/$apiversion/sandbox",
+                    CURLOPT_RETURNTRANSFER => true,
+                    CURLOPT_ENCODING => "",
+                    CURLOPT_MAXREDIRS => 10,
+                    CURLOPT_TIMEOUT => 30,
+                    CURLOPT_HTTP_VERSION => CURL_HTTP_VERSION_1_1,
+                    CURLOPT_CUSTOMREQUEST => "POST",
+                    CURLOPT_POSTFIELDS => "{\"header\":{\"ID\":\"$client_id\",\"application\":\"$client_id\"},\"payload\":{\"sandboxId\":\"$sandbox_id\",\"userId\":\"$username\"}}",
+                    CURLOPT_HTTPHEADER => array(
+                    "accept: application/json",
+                    "authorization: $token",
+                    "content-type: application/json",
+                    "client-id: $client_id",
+    				"request-id: $client_id"
+                ),
+                ));
+
+            }
+
+else if($tokencheck==="1"){
+
                 curl_setopt_array($curl, array(
                     CURLOPT_URL => "https://apis.nbg.gr/sandbox/$api/oauth2/$apiversion/sandbox",
                     CURLOPT_RETURNTRANSFER => true,
@@ -56,27 +107,8 @@ echo 'sandbox_id';
                 ),
                 ));
 
-            } else if(($tokencheck==="1") and ($api==="uk.openbanking.accountinfo")){
-echo $sandbox_id ;
-                curl_setopt_array($curl, array(
-                    CURLOPT_URL => "https://apis.nbg.gr/sandbox/$api/oauth2/$apiversion/sandbox",
-                    CURLOPT_RETURNTRANSFER => true,
-                    CURLOPT_ENCODING => "",
-                    CURLOPT_MAXREDIRS => 10,
-                    CURLOPT_TIMEOUT => 30,
-                    CURLOPT_HTTP_VERSION => CURL_HTTP_VERSION_1_1,
-                    CURLOPT_CUSTOMREQUEST => "POST",
-                    CURLOPT_POSTFIELDS => "{\"header\":{\"ID\":\"casskass\",\"application\":\"$client_id\"},\"payload\":{\"sandboxId\":\"$sandbox_id\",\"userId\":\"casskasss\"}}",
-                    CURLOPT_HTTPHEADER => array(
-                    "accept: application/json",
-                    "authorization: $token",
-                    "content-type: application/json",
-                    "client-id: $client_id",
-    				"request-id: $client_id"
-                ),
-                ));
-
             }
+
                else if(($tokencheck==="2") and ($api==="obpcard")){
                 curl_setopt_array($curl, array(
   CURLOPT_URL => "https://apis.nbg.gr/sandbox/$api/headers/$apiversion/sandbox",
@@ -134,7 +166,7 @@ echo $sandbox_id ;
                 ),
                 )); }
 
-                else { echo 'takis';
+                else {
 
                 curl_setopt_array($curl, array(
                     CURLOPT_URL => "https://apis.nbg.gr/sandbox/$api/headers/$apiversion/sandbox",
