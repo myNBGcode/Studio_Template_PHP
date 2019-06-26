@@ -1,6 +1,7 @@
 @import url('https://fonts.googleapis.com/css?family=Open+Sans:600');
 
 body {
+	color:#333333;
 	font-family: 'Poppins', sans-serif;
 	font-size: 1em;
 	margin-top:20px;
@@ -9,6 +10,20 @@ body {
 	margin-right:0px!important;
 }
 p{font-size:18px;}
+
+h1{font-size:32px;color:#333333;}
+
+.weight {
+	font-weight:800;
+}
+.center{
+	text-align:center;
+}
+hr.divider{
+	width:40%;
+	border:2px solid #015563;
+}
+
 
 /*********************************** POP UP START (FOR STATUS CODE) *************************************/
 
@@ -140,133 +155,9 @@ p{font-size:18px;}
   }
 }
 
-/**************************************** FORM START (APP CREDENTIALS) ****************************************/
-
-/* Input Fields Form */
-.form-style-10{
-	width:450px;
-	padding:30px;
-	padding-bottom: 2px!important;
-	margin:40px auto;
-	background: #FFF;
-	border-radius: 10px;
-	-webkit-border-radius:10px;
-	-moz-border-radius: 10px;
-	box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.13);
-	-moz-box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.13);
-	-webkit-box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.13);
-}
-.form-style-10 .inner-wrap{
-	padding: 10px;
-	padding-bottom: 2px!important;
-	background: #F8F8F8;
-	border-radius: 6px;
-	margin-bottom: 15px;
-}
-.form-style-10 h1{
-	background: #006e80;
-	padding: 20px 30px 15px 30px;
-	margin: -30px -30px 30px -30px;
-	border-radius: 10px 10px 0 0;
-	-webkit-border-radius: 10px 10px 0 0;
-	-moz-border-radius: 10px 10px 0 0;
-	color: #fff;
-	text-shadow: 1px 1px 3px black;
-	font: normal 30px 'Poppins', sans-serif;
-	-moz-box-shadow: inset 0px 2px 2px 0px rgba(255, 255, 255, 0.17);
-	-webkit-box-shadow: inset 0px 2px 2px 0px rgba(255, 255, 255, 0.17);
-	box-shadow: inset 0px 2px 2px 0px rgba(255, 255, 255, 0.17);
-	border: 1px solid #257C9E;
-}
-.form-style-10 h1 > span{
-	display: block;
-	margin-top: 2px;
-	font: 13px 'Poppins', sans-serif;
-}
-.form-style-10 label{
-	display: block;
-	font: 13px 'Poppins', sans-serif;
-	color: #888;
-	margin-bottom: 15px;
-}
-.form-style-10 input[type="text"],
-.form-style-10 input[type="date"],
-.form-style-10 input[type="datetime"],
-.form-style-10 input[type="email"],
-.form-style-10 input[type="number"],
-.form-style-10 input[type="search"],
-.form-style-10 input[type="time"],
-.form-style-10 input[type="url"],
-.form-style-10 input[type="password"],
-.form-style-10 textarea,
-.form-style-10 select {
-	display: block;
-	box-sizing: border-box;
-	-webkit-box-sizing: border-box;
-	-moz-box-sizing: border-box;
-	width: 100%;
-	padding: 8px;
-	border-radius: 6px;
-	-webkit-border-radius:6px;
-	-moz-border-radius:6px;
-	border: 2px solid #fff;
-	box-shadow: inset 0px 1px 1px rgba(0, 0, 0, 0.33);
-	-moz-box-shadow: inset 0px 1px 1px rgba(0, 0, 0, 0.33);
-	-webkit-box-shadow: inset 0px 1px 1px rgba(0, 0, 0, 0.33);
-}
-
-.form-style-10 .section{
-	font: normal 20px 'Poppins', sans-serif;
-	color: #006e80;
-	margin-bottom: 5px;
-}
-.form-style-10 .section span {
-	background: #006e80;
-	padding: 5px 10px 5px 10px;
-	position: absolute;
-	border-radius: 50%;
-	-webkit-border-radius: 50%;
-	-moz-border-radius: 50%;
-	border: 4px solid #fff;
-	font-size: 14px;
-	margin-left: -45px;
-	color: #fff;
-	margin-top: -3px;
-}
-.form-style-10 input[type="button"],
-.form-style-10 input[type="submit"]{
-	background: #006e80;
-	padding: 8px 20px 8px 20px;
-	border-radius: 5px;
-	-webkit-border-radius: 5px;
-	-moz-border-radius: 5px;
-	color: #fff;
-	text-shadow: 1px 1px 3px black;
-	font: normal 30px 'Poppins', sans-serif;
-	-moz-box-shadow: inset 0px 2px 2px 0px rgba(255, 255, 255, 0.17);
-	-webkit-box-shadow: inset 0px 2px 2px 0px rgba(255, 255, 255, 0.17);
-	box-shadow: inset 0px 2px 2px 0px rgba(255, 255, 255, 0.17);
-	border: 1px solid #257C9E;
-	font-size: 15px;
-}
-.form-style-10 input[type="button"]:hover,
-.form-style-10 input[type="submit"]:hover{
-	background: #1F3E3C;
-	cursor: pointer;
-	-moz-box-shadow: inset 0px 2px 2px 0px rgba(255, 255, 255, 0.28);
-	-webkit-box-shadow: inset 0px 2px 2px 0px rgba(255, 255, 255, 0.28);
-	box-shadow: inset 0px 2px 2px 0px rgba(255, 255, 255, 0.28);
-}
-.form-style-10 .privacy-policy{
-	float: right;
-	width: 250px;
-	font: 12px 'Poppins', sans-serif;
-	color: #4D4D4D;
-	margin-top: 10px;
-	text-align: right;
-}
+/**************************************** BUTTONS (CALLS) *******************************************/
 .button {
-  background-color: #006e80; /* NBG color */
+  background-color: #008599; /* NBG color #006e80 #006f80 #1F3E3C*/
   border: none;
   color: white;
   padding: 15px 32px;
@@ -276,10 +167,10 @@ p{font-size:18px;}
   font-size: 16px;
   margin: 4px 2px;
   cursor: pointer;
-  border-radius:3%;
+  border-radius:24px;
 }
 .button:hover {
-  background-color: #1F3E3C;
+  background-color: #006e80;
 
 }
 
@@ -291,7 +182,7 @@ p{font-size:18px;}
     color: #d9d9d9;
 
 }
-.footer .title{text-align: left;color:#fff;font-size:25px;text-shadow: 2px 2px black!important;}
+.footer .title{text-align: left;color:#fff;font-size:25px;text-shadow: 2px 2px black!important;font-weight:800;}
 
 
 .footer .social-icon{padding:0px;margin:0px;}
@@ -354,35 +245,15 @@ p{font-size:18px;}
 	.form-style-10{
 		width:350px;
 	}
+
 }
 
-/****************************** FORM CONDITIONAL FIELD - oAuth API TOKEN *****************************/
-.control:checked ~ .conditional,
-			#immigrant:checked ~ .conditional,
-			#required-2:checked ~ .conditional
-			#option-2:checked ~ .conditional {
-				clip: auto;
-				height: auto;
-				margin: 0;
-				overflow: visible;
-				position: static;
-				width: auto;
-			}
-
-			.control:not(:checked) ~ .conditional,
-			#immigrant:not(:checked) ~ .conditional,
-			#required-2:not(:checked) ~ .conditional,
-			#option-2:not(:checked) ~ .conditional {
-				border: 0;
-				clip: rect(0 0 0 0);
-				height: 1px;
-				margin: -1px;
-				overflow: hidden;
-				padding: 0;
-				position: absolute;
-				width: 1px;
-			}
-.fieldset {border-width:0px!important;}
+@media screen and (max-width: 700px) {
+	.sign-up-modal input[type="submit"]{
+		padding:5px 5px!important;
+		margin-left:5px!important;
+	}
+}
 
 /************************************  TEXTAREA FOR RESPONSE SAMPLES **************************************/
 .textareacss {
@@ -391,84 +262,6 @@ p{font-size:18px;}
 	width:99.5%; /*  */
 }
 
-/******************************* FORM HANDLER RADIOBUTTONS BOX (CARD) FOR index.php *****************************/
-/*
-.card ul {
-	list-style-type: none;
-	padding-left: 50px;
-	margin: 0;
-}
-
-.card li {
-	display: block;
-	position: relative;
-	padding: 20px 0px;
-}
-
-.card h2 {
-	margin: 10px 0;
-	font-weight: 900;
-	font-size:24px;
-	text-align:center;
-}
-
-*/
-/* Card (RADIO )
-––––––––––––––––––––––––––––––––––––––––––––––––––
-.card {
-	margin:auto;
-	display: flex;
-	flex-direction: column;
-	background: white;
-	width: 300px;
-	padding: 20px 25px;
-	border-radius: 20px;
-	box-shadow: 0 19px 38px rgba(0, 0, 0, 0.26);
-}
-*/
-
-/* Radio Button
-––––––––––––––––––––––––––––––––––––––––––––––––––
-input[type=radio] {
-	position: absolute;
-	visibility: hidden;
-}
-
-label {
-	cursor: pointer;
-	font-weight: 600;
-	font-size:18px;
-}
-
-.check {
-	width: 30px; height: 30px;
-	position: absolute;
-	border-radius: 50%;
-	transition: transform .6s ;
-}
-*/
-/* Reset
-input#chooseone ~ .check {
-	transform: translate(-50px, -25px);
-	background: #B2D7F5;
-}
-input#choosetwo ~ .check {
-	transform: translate(-50px, -83px);
-	background: #2196F3;
-	box-shadow: 0 6px 12px rgba(33, 150, 243, 0.35);
-}
-*/
-/* Radio Input #1
-input#chooseone:checked ~ .check { transform: translate(-50px, 33px); }
-*/
-/* Radio Input #2
-input#choosetwo:checked ~ .check { transform: translate(-50px, -25px); }
-*/
-/* Form radio buttons
-.formcheckerbuttons {
-	margin:auto;
-}
- */
 
 /************************* FORM HANDLER RADIOBUTTONS BOX (VERSION 2) FOR index.php ***************************/
 @import url('https://fonts.googleapis.com/css?family=Open+Sans:600');
@@ -525,7 +318,7 @@ input#choosetwo:checked ~ .check { transform: translate(-50px, -25px); }
   top: 108px;
 }
 .circle {
-  border: 2px solid #545556;
+  border: 2px solid #333333;
   border-radius: 50%;
   cursor: pointer;
   height: 20px;
@@ -550,7 +343,7 @@ input#choosetwo:checked ~ .check { transform: translate(-50px, -25px); }
   width: 40px;
 }
 .highlight {
-  background: #4D98EF;
+  background: #006f80;
   border-radius: 50%;
   height: 12px;
   left: 14px;
@@ -571,19 +364,19 @@ input#choosetwo:checked ~ .check { transform: translate(-50px, -25px); }
   transform: translateY(100px);
 }
 .hidden:nth-child(1):checked + .entry .circle {
-  border-color: #4D98EF;
+  border-color: #006f80;
 }
 .hidden:nth-child(3):checked + .entry .circle {
-  border-color: #4D98EF;
+  border-color: #006f80;
 }
 .hidden:nth-child(5):checked + .entry .circle {
-  border-color: #4D98EF;
+  border-color: #006f80;
 }
 .checkHandler:checked ~ .containerOuter .overlayHandler {
   background: #ecf0f4;
 }
 
-/*********************************************** HEADER NAVIGATION *********************************************/
+/***************************************** HEADER NAVIGATION *************************************/
 /* Style the header with a grey background and some padding */
 .header {
   margin-top:-20px;
@@ -628,15 +421,15 @@ input#choosetwo:checked ~ .check { transform: translate(-50px, -25px); }
 }
 
 /* Change the background color on mouse-over */
-.header .mitem:hover {
+.header .mitem:hover  {
   background-color: white;
-  color: black;
+  color: #006e80;
 }
 
 /* Style the active/current link*/
-.header .mitem.active {
+.header .mitem.active  {
   background-color: white;
-  color: black;
+  color: #006e80;
 }
 
 /* Float the link section to the right */
@@ -657,7 +450,7 @@ input#choosetwo:checked ~ .check { transform: translate(-50px, -25px); }
   }
 	.dropdown-content {margin-top:-3px!important;}
 }
-/************************************** DROPDOWN IN HEADER (CALLS) *******************************************/
+/************************************** DROPDOWN IN HEADER (CALLS) ****************************************/
 
 .dropdown {
   float: left;
@@ -667,6 +460,10 @@ input#choosetwo:checked ~ .check { transform: translate(-50px, -25px); }
   background-color: white;
 }
 /* Dropdown button */
+.dropdown:hover .dropdownbtn {
+  background-color: white!important;
+	color:#006e80;
+}
 
 /* Add a red background color to navbar links on hover */
 .dropdown:hover .dropbtn {
@@ -706,24 +503,340 @@ input#choosetwo:checked ~ .check { transform: translate(-50px, -25px); }
 .dropdown:hover .dropdown-content {
   display: block;
 }
-/***************************************** BACK TO TOP BUTTON *********************************************/
 
-#myBtn {
-  display: none; /* Hidden by default */
-  position: fixed; /* Fixed/sticky position */
-  bottom: 20px; /* Place the button at the bottom of the page */
-  right: 30px; /* Place the button 30px from the right */
-  z-index: 99; /* Make sure it does not overlap */
-  border: none; /* Remove borders */
-  outline: none; /* Remove outline */
-  background-color: black; /* Set a background color */
-  color: white; /* Text color */
-  cursor: pointer; /* Add a mouse pointer on hover */
-  padding: 10px; /* Some padding */
-  border-radius: 10%; /* Rounded corners */
-  font-size: 15px; /* Increase font size */
+/******************************************* GET TOKEN FORM ********************************************/
+
+.sign-up-modal p,
+.sign-up-modal .form-checkbox label {
+		font-size: 1em;
+		font-weight: 300;
 }
 
-#myBtn:hover {
-  background-color: #1F3E3C; /* Add a dark-grey background on hover */
+.sign-up-modal .form-checkbox label {
+		cursor: pointer;
 }
+
+.logo {
+		fill: #FEFEFE;
+}
+
+.logo-container {
+		width: 100%;
+		margin-top: 50px;
+		position: relative;
+		text-align: center;
+}
+
+.sign-up-modal {
+
+		color: #fefefe;
+		border-radius: 10px 10px 10px 10px;
+		background-image: -moz-linear-gradient( -90deg, #009bb3 0%, #006f80 100%);
+		background-image: -webkit-linear-gradient( -90deg, #009bb3 0%, #006f80 100%);
+		background-image: -ms-linear-gradient( -90deg, #009bb3 0%, #006f80 100%);
+		width: 90%;
+		min-width: 400px;
+		max-width: 700px;
+		margin: 0 auto;
+		padding: 25px;
+	border-radius:20px;
+}
+
+.sign-up-modal form {
+		margin: 0 auto;
+		text-align: center;
+}
+
+.sign-up-modal input::-webkit-input-placeholder {
+		color: #fefefe;
+		opacity: 1;
+}
+
+.sign-up-modal input:focus::-webkit-input-placeholder {
+		color: #111;
+		opacity: .5;
+		transition: all 0.3s ease;
+}
+
+.sign-up-modal .input-container {
+		margin: 10px;
+}
+
+.sign-up-modal input[type="email"],
+.sign-up-modal input[type="text"],
+.sign-up-modal input[type="password"],
+.sign-up-modal input[type="checkbox"]:focus,
+.sign-up-modal input[type="submit"]:focus {
+		outline: 0;
+}
+
+.sign-up-modal input[type="email"],
+.sign-up-modal input[type="text"],
+.sign-up-modal input[type="password"] {
+		font-weight: 500;
+		font-size: 1em;
+		padding: 10px;
+		border-width: 2px;
+		border-color: rgba(247, 247, 247, .3);
+		border-style: solid;
+		background: url('transparent');
+	width:85%;
+	border-radius:5px;
+	color:white;
+}
+
+.sign-up-modal input[type="email"]:focus,
+.sign-up-modal input[type="text"]:focus,
+.sign-up-modal input[type="password"]:focus {
+		background: white;
+		transition: all 0.3s ease;
+		color: #222;
+}
+
+.sign-up-modal input[type="checkbox"] {
+		-webkit-appearance: none;
+		background-color: #fefefe;
+		display: inline-block;
+		position: relative;
+		padding: 6px;
+		margin-left: -6px;
+		margin-top: 25px;
+		cursor: pointer;
+}
+
+.sign-up-modal input[type="checkbox"]:checked:after {
+		content: '\2714';
+		font-size: 13px;
+		position: absolute;
+		top: -2px;
+		left: 2px;
+		color: #111;
+}
+
+.sign-up-modal a {
+		color: #fefefe;
+		text-decoration: underline;
+}
+
+.sign-up-modal a:hover {
+		color: #d26960;
+}
+
+.sign-up-modal input[type="submit"] {
+		font-weight: 700;
+		font-size: 1.8em;
+		color: #111;
+		background: #fefefe;
+		box-shadow: 0px 4px 0px 0px #217dab;
+		border-style: none;
+		padding: 10px 50px;
+		margin: 25px 0 15px 0;
+		position: relative;
+		display: inline-block;
+		transition: all .1s linear;
+	border-radius:10px;
+	cursor:pointer;
+}
+
+.sign-up-modal input[type="submit"]:active {
+		box-shadow: 0 2px 0 #217dab;
+		transform: translateY(3px);
+		-webkit-transform: translateY(3px);
+		-ms-transform: translateY(3px);
+}
+
+.sign-up-modal #close-modal-button {
+		border-radius: 50%;
+		width: 50px;
+		height: 50px;
+		background-color: #006f80;
+		float: right;
+		position: relative;
+		top: -55px;
+		left: 50px;
+		cursor: pointer;
+}
+
+.sign-up-modal #close-modal-button:before {
+		content: '\2716';
+		font-size: 1.5em;
+		position: relative;
+		top: 10px;
+		left: 17px;
+}
+
+@media only screen and (min-width: 768px) {
+		.sign-up-modal .form-checkbox {
+				text-align: left;
+		}
+		.sign-up-modal .password-input {
+				width: 47.5%;
+				margin-left: -11.5%;
+		}
+		.sign-up-modal .username-input {
+				width: 47.5%;
+		}
+		.sign-up-modal .email-input {
+				margin-bottom: 20px;
+				margin-top: 50px;
+		}
+		.sign-up-modal form {
+				width: 70%;
+		}
+}
+
+/*************************** APP CREDENTIALS FORM (HEADERS APIs and Oauth2 APIs) **********************/
+
+#form a{color:white;text-decoration: underline;}
+#form a:hover{color:white;}
+.pull-right{float: right;}
+.pull-left{float: left;}
+.clear-fix{clear:both;}
+
+
+div#form{
+	width:360px;
+	height:320px;
+	height:auto;
+	background-color: #fff;
+	margin:auto;
+	border-radius: 5px;
+	padding:20px;
+	left:50%;
+	top:50%;
+	box-shadow:1px 1px 10px 1px grey;
+}
+div.form-item{position: relative; display: block; margin-bottom: 20px;min-width: 322px;}
+ input{transition: all .2s ease;}
+ input.form-style{
+	color:#333333;
+	display: block;
+   flex:1;
+	width: 90%;
+	height: 44px;
+	padding: 5px 5%;
+	border:1px solid #ccc;
+	-moz-border-radius: 27px;
+	-webkit-border-radius: 27px;
+	border-radius: 27px;
+	-moz-background-clip: padding;
+	-webkit-background-clip: padding-box;
+	background-clip: padding-box;
+	background-color: #fff;
+	font-family:'HelveticaNeue','Arial', sans-serif;
+	font-size: 105%;
+	letter-spacing: .8px;
+}
+div.form-item .form-style:focus{outline: none; border:1px solid #006f80; color:#006f80; }
+div.form-item p.formLabel {
+	position: absolute;
+	left:26px;
+	top:2px;
+	transition:all .4s ease;
+	color:#bbb;
+	border-radius:5px;}
+.formTop{top:-22px !important; left:26px; background-color: #fff; padding:0 5px; font-size: 14px; color:#006f80 !important;}
+.formStatus{color:#8a8a8a !important;}
+input[type="submit"].login{
+	float:right;
+	width: 112px;
+	height: 37px;
+	-moz-border-radius: 19px;
+	-webkit-border-radius: 19px;
+	border-radius: 19px;
+	-moz-background-clip: padding;
+	-webkit-background-clip: padding-box;
+	background-clip: padding-box;
+	background-color: #006f80;
+	border:1px solid #006f80;
+	border:none;
+	color: #fff;
+	font-weight: bold;
+}
+#form input[type="submit"].login:hover{background-color: #fff; border:1px solid #006f80; color:#006f80; cursor:pointer;}
+#form input[type="submit"].login:focus{outline: none;}
+
+#form h1 {
+  font-family: "Open Sans", sans-serif;
+  font-size: 2em;
+  line-height: 1.09375em;
+  font-weight: 700;
+  margin-bottom: 40px;
+  color: #383435;
+}
+.form a:link{color:white;}
+.form a:visited{color:white;}
+.form a:hover{color:white;}
+.form a:active{color:white;}
+.form {color:white;}
+
+/********************************** Tooltip (?) for more info *****************************************/
+section#tooltip p {
+  margin: 20px 0;
+}
+
+section#tooltip > div > div > p:nth-child(odd)::first-letter {
+  font-weight: normal;
+  float: left;
+  font-size: 4em;
+  line-height: .75;
+  letter-spacing: .15em;
+  margin-top: .2em;
+}
+
+.wrapper {
+  max-width: 800px;
+}
+
+/*Tooltip text*/
+.tooltip {
+  position: relative;
+  color: white;
+  padding: 5px 12px;
+  margin: 5px;
+  font-size: 15px;
+  border-radius: 100%;
+  background-color: #006f80;
+}
+
+.tooltip .tooltip-text {
+  font-family: "Open Sans", sans-serif;
+  font-size: 1em;
+  line-height: 1.5em;
+  visibility: hidden;
+  max-width: 800px;
+  min-width:200px;
+  background-color: #006f80;
+  color: #fff;
+  text-align: center;
+  border-radius: 6px;
+  padding: 10px;
+  position: absolute;
+  z-index: 1;
+  bottom: 125%;
+  left: -290%;
+
+  opacity: 0;
+  transition: .3s;
+  transform: translate3d(0px, 20px, 0px);
+}
+
+.tooltip .tooltip-text::after {
+  content: "";
+  position: absolute;
+  top: 100%;
+  left: 50%;
+  margin-left: -5px;
+  border-width: 5px;
+  border-style: solid;
+  border-color: #006f80 transparent transparent transparent;
+}
+
+.tooltip:hover .tooltip-text {
+  visibility: visible;
+  opacity: 1;
+  transform: translate3d(0px, 0px, 0px);
+}
+
+
+

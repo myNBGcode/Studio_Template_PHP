@@ -11,9 +11,10 @@
         include ("header.php");
       ?>
 
-        <h1 style="text-align:center;">Create Sandbox User call Page - <span style="color:#006e80;">PHP Sandbox Calls Test Website</span></h1>
-        <div id="testcalls" >
-        <h3 style="font-size:32px;text-align:center;" >
+        <h1 class="weight center" style="margin-top:35px;">Create Sandbox User call Page - PHP Test Website</h1>
+        <div id="testcalls">
+            <hr class="divider">
+        <h3 style="font-size:32px;" class="weight center">
             Request <span style="color:#015563">Samples:</span>
         </h3> </div>
         <div id="showbuttons" style="text-align:center;margin-bottom:55px;margin-top:25px;" >
@@ -28,9 +29,23 @@
         </ol>
         </div>
 
-         <h3 style="font-size: 24px;margin-bottom:10px;">
+         <h3 style="font-size: 24px;margin-bottom:10px;" class="weight">
             Response Samples:
         </h3>
+
+
+        <?php  function generate_uuid() {
+    return sprintf( '%04x%04x-%04x-%04x-%04x-%04x%04x%04x',
+        mt_rand( 0, 0xffff ), mt_rand( 0, 0xffff ),
+        mt_rand( 0, 0xffff ),
+        mt_rand( 0, 0x0C2f ) | 0x4000,
+        mt_rand( 0, 0x3fff ) | 0x8000,
+        mt_rand( 0, 0x2Aff ), mt_rand( 0, 0xffD3 ), mt_rand( 0, 0xff4B )
+    );
+
+}
+       $myguid = generate_uuid();
+        ?>
 <!--
 Status code pop up content. Feel free to add it in your new requests, in order to show the Status Code of your calls.
 -->
@@ -58,7 +73,7 @@ Status code pop up content. Feel free to add it in your new requests, in order t
                     "authorization: $token",
                     "content-type: application/json",
                     "client-id: $client_id",
-    				"request_id: $client_id"
+    				"request_id: $myguid"
 
                     ),
                 ));
@@ -99,7 +114,7 @@ $httpcode = curl_getinfo($curl, CURLINFO_HTTP_CODE);
                  $json_pretty = json_encode(json_decode($response), JSON_PRETTY_PRINT);
                 echo $json_pretty;
 
-                    if(trim($json_pretty)==='null'){echo ' - Check the documentation of the API you are using, in case the request you are trying to send is not even available!';}
+                    if(trim($json_pretty)==='null'){echo ' - Check the documentation of the API you are using, in case the request you are trying to send is not even available. If it is available, validate the code of the call in createsandboxuser.php file';}
                 }
 
                 ?>

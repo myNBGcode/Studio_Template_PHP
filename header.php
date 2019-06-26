@@ -10,14 +10,18 @@
   <a href="/index.php"><img  src="https://developer.nbg.gr/static/media/developerstudio@4x.cc1a74b3.png" class="logo"/></a>
   <div class="header-right">
     <a class="active mitem" href="/index.php">Home</a>
-      <div class="dropdown">
-    <a href="#" class="mitem">Calls
+
+
+           <div class="dropdown">
+    <a href="#" class="mitem dropdownbtn">Calls
       <i class="fa fa-caret-down"></i>
     </a>
+
+
     <div class="dropdown-content">
       <a href="/createsandbox.php" class="mitem">Create Sandbox</a>
-      <a href="/exportsandbox.php" class="mitem">Export Sandbox</a>
-      <a href="/deletesandbox.php" class="mitem">Delete Sandbox</a>
+     <a href="/exportsandbox.php" class="mitem">Export Sandbox</a>
+     <a href="/deletesandbox.php" class="mitem">Delete Sandbox</a>
         <a href="/createsandboxuser.php" class="mitem">Create Sandbox User</a>
     </div>
   </div>

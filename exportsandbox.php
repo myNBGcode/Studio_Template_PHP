@@ -11,9 +11,10 @@
         include ("header.php");
       ?>
 
-        <h1 style="text-align:center;">Export Sandbox call Page - <span style="color:#006e80;">PHP Sandbox Calls Test Website</span></h1>
-        <div id="testcalls" >
-        <h3 style="font-size:32px;text-align:center;" >
+        <h1 style="margin-top:35px;" class="weight center">Export Sandbox call Page - PHP Test Website</h1>
+        <div id="testcalls">
+            <hr class="divider">
+        <h3 style="font-size:32px;" class="center weight">
             Request <span style="color:#015563">Samples:</span>
         </h3> </div>
         <div id="showbuttons" style="text-align:center;margin-bottom:55px;margin-top:25px;" >
@@ -28,9 +29,22 @@
         </ol>
         </div>
 
-        <h3 style="font-size: 24px;margin-bottom:10px;">
+        <h3 style="font-size: 24px;margin-bottom:10px;" class="weight">
             Response Samples:
         </h3>
+
+<?php  function generate_uuid() {
+    return sprintf( '%04x%04x-%04x-%04x-%04x-%04x%04x%04x',
+        mt_rand( 0, 0xffff ), mt_rand( 0, 0xffff ),
+        mt_rand( 0, 0xffff ),
+        mt_rand( 0, 0x0C2f ) | 0x4000,
+        mt_rand( 0, 0x3fff ) | 0x8000,
+        mt_rand( 0, 0x2Aff ), mt_rand( 0, 0xffD3 ), mt_rand( 0, 0xff4B )
+    );
+
+}
+       $myguid = generate_uuid();
+        ?>
 
 <!--
 Request sample in PHP. For requests in other programming languages visit developers.nbg.gr
@@ -38,7 +52,139 @@ Request sample in PHP. For requests in other programming languages visit develop
       		<textarea class="textareacss" name="myTextarea" id="myTextarea" cols="100" rows="100">
                 <?php
                 include_once ("variables.php");
-                $curl = curl_init();
+
+                 $curl = curl_init();
+
+
+                  if(($tokencheck==="1") and ($api==="confirmation.funds")){
+
+               curl_setopt_array($curl, array(
+  CURLOPT_URL => "https://apis.nbg.gr/sandbox/confirmation.funds/oauth2/v1.3/sandbox/$sandbox_id",
+  CURLOPT_RETURNTRANSFER => true,
+  CURLOPT_ENCODING => "",
+  CURLOPT_MAXREDIRS => 10,
+  CURLOPT_TIMEOUT => 30,
+  CURLOPT_HTTP_VERSION => CURL_HTTP_VERSION_1_1,
+  CURLOPT_CUSTOMREQUEST => "GET",
+  CURLOPT_HTTPHEADER => array(
+    "authorization: $token",
+    "client-id: $client_id",
+    "content-type: application/json"
+  ),
+));
+
+            } else if(($tokencheck==="1") and ($api==="uk.openbanking.accountinfo")){
+
+                curl_setopt_array($curl, array(
+  CURLOPT_URL => "https://apis.nbg.gr/sandbox/uk.openbanking.accountinfo/oauth2/v3.1.1/sandbox/$sandbox_id",
+  CURLOPT_RETURNTRANSFER => true,
+  CURLOPT_ENCODING => "",
+  CURLOPT_MAXREDIRS => 10,
+  CURLOPT_TIMEOUT => 30,
+  CURLOPT_HTTP_VERSION => CURL_HTTP_VERSION_1_1,
+  CURLOPT_CUSTOMREQUEST => "GET",
+  CURLOPT_HTTPHEADER => array(
+    "accept: application/json",
+    "authorization: $token",
+    "client-id: $client_id",
+    "content-type: application/json"
+  ),
+));
+
+            }
+/*
+else if($tokencheck==="1"){
+
+                curl_setopt_array($curl, array(
+                    CURLOPT_URL => "https://apis.nbg.gr/sandbox/$api/oauth2/$apiversion/sandbox",
+                    CURLOPT_RETURNTRANSFER => true,
+                    CURLOPT_ENCODING => "",
+                    CURLOPT_MAXREDIRS => 10,
+                    CURLOPT_TIMEOUT => 30,
+                    CURLOPT_HTTP_VERSION => CURL_HTTP_VERSION_1_1,
+                    CURLOPT_CUSTOMREQUEST => "POST",
+                    CURLOPT_POSTFIELDS => "{\"sandbox_Id\":\"$sandbox_id\"}",
+                    CURLOPT_HTTPHEADER => array(
+                    "accept: application/json",
+                    "authorization: $token",
+                    "content-type: application/json",
+                    "client-id: $client_id",
+    				"request_id: $client_id"
+                ),
+                ));
+
+            }*/
+                else if($api==="account.info"){
+
+curl_setopt_array($curl, array(
+  CURLOPT_URL => "https://apis.nbg.gr/sandbox/account.info/oauth2/v1.3/sandbox/$sandbox_id",
+  CURLOPT_RETURNTRANSFER => true,
+  CURLOPT_ENCODING => "",
+  CURLOPT_MAXREDIRS => 10,
+  CURLOPT_TIMEOUT => 30,
+  CURLOPT_HTTP_VERSION => CURL_HTTP_VERSION_1_1,
+  CURLOPT_CUSTOMREQUEST => "GET",
+  CURLOPT_HTTPHEADER => array(
+    "authorization: $token",
+    "client-id: $client_id",
+    "content-type: application/json",
+    "request-id: $myguid"
+  ),
+)); }
+
+
+
+
+               else if(($tokencheck==="2") and ($api==="obpcard")){
+                curl_setopt_array($curl, array(
+  CURLOPT_URL => "https://apis.nbg.gr/sandbox/obpcard/headers/v1.3/sandbox/%7Bsandbox_id%7D",
+  CURLOPT_RETURNTRANSFER => true,
+  CURLOPT_ENCODING => "",
+  CURLOPT_MAXREDIRS => 10,
+  CURLOPT_TIMEOUT => 30,
+  CURLOPT_HTTP_VERSION => CURL_HTTP_VERSION_1_1,
+  CURLOPT_CUSTOMREQUEST => "GET",
+  CURLOPT_HTTPHEADER => array(
+    "client-id: $client_id",
+    "content-type: application/json",
+    "request_id: $myguid"
+  ),
+));}
+
+                else if ($api==="ocr"){
+
+               curl_setopt_array($curl, array(
+  CURLOPT_URL => "https://apis.nbg.gr/sandbox/ocr/headers/v1.2/sandbox/$sandbox_id",
+  CURLOPT_RETURNTRANSFER => true,
+  CURLOPT_ENCODING => "",
+  CURLOPT_MAXREDIRS => 10,
+  CURLOPT_TIMEOUT => 30,
+  CURLOPT_HTTP_VERSION => CURL_HTTP_VERSION_1_1,
+  CURLOPT_CUSTOMREQUEST => "GET",
+  CURLOPT_HTTPHEADER => array(
+    "client-id: $client_id",
+    "content-type: application/json"
+  ),
+)); }
+
+                 else if ($api==="biometrics"){ echo 'biometrics inconsistency of POSTFIELD sandbox-id and URL';
+
+               curl_setopt_array($curl, array(
+  CURLOPT_URL => "https://apis.nbg.gr/sandbox/biometrics/headers/v1.3/api/sandbox/$sandbox_id",
+  CURLOPT_RETURNTRANSFER => true,
+  CURLOPT_ENCODING => "",
+  CURLOPT_MAXREDIRS => 10,
+  CURLOPT_TIMEOUT => 30,
+  CURLOPT_HTTP_VERSION => CURL_HTTP_VERSION_1_1,
+  CURLOPT_CUSTOMREQUEST => "GET",
+  CURLOPT_HTTPHEADER => array(
+    "client-id: $client_id",
+    "content-type: application/json"
+  ),
+)); }
+
+                else {
+
                 curl_setopt_array($curl, array(
                     CURLOPT_URL => "https://apis.nbg.gr/sandbox/$api/headers/$apiversion/sandbox/$sandbox_id",
                     CURLOPT_RETURNTRANSFER => true,
@@ -52,7 +198,7 @@ Request sample in PHP. For requests in other programming languages visit develop
                     "client-id: $client_id",
                     "content-type: application/json"
                 ),
-                ));
+                )); }
 
                 $response = curl_exec($curl);
                 $err = curl_error($curl);
