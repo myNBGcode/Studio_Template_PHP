@@ -277,7 +277,7 @@ foreach($scopearr as $singlescope){
 
     if(isset($_POST["submitheader"]) || isset($_POST["submitoauth"])){
 
-
+$_SESSION['sclientid'] = $_POST['clientid'];
 
 /*********************** REWRITE THE FILE NAMED VARIABLES.PHP FROM SCRATCH (EVERY OTHER VALUE THAT WAS BEFORE IN THE FILE GETS REWRITTED - ONLY VALUES SHOWN BELOW REMAIN FINALLY IN THE FILE) ****************************/
     $fptest = fopen("variables.php", 'w');
